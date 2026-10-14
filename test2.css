@@ -1,0 +1,213 @@
+/* =================================sh
+   全体のリセットとベース設定
+================================= */
+body {
+    font-family: sans-serif;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #fcfbfa; /* ページ全体の背景色（薄いベージュ系） */
+}
+
+/* =================================
+   ヘッダー (Header)
+================================= */
+header {
+    background-color: #38614c; /* 深い緑色の背景 */
+    color: #ffffff;
+    text-align: center;
+    padding: 40px 20px;
+    margin-bottom: 50px;
+}
+
+header h1 {
+    font-size: 2.2em;
+    margin: 0 0 10px 0;
+    letter-spacing: 2px;
+}
+
+header p {
+    margin: 0 0 25px 0;
+    font-size: 0.95em;
+    color: #e2ede5;
+}
+
+/* ナビゲーションメニュー（横並び・中央寄せ・白文字） */
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+header nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95em;
+    transition: opacity 0.2s;
+}
+
+header nav a:hover {
+    opacity: 0.8;
+}
+
+/* =================================
+   メインコンテンツ (Main)
+================================= */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* セクション共通 */
+section {
+    margin-bottom: 70px;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 1.6em;
+    color: #38614c;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 25px;
+}
+
+/* 見出しの下線アクセント */
+section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background-color: #38614c;
+}
+
+/* --- About Us --- */
+#about p {
+    max-width: 600px;
+    margin: 0 auto 25px auto;
+    font-size: 0.95em;
+}
+
+#about img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* --- Menu (カード風レイアウト) --- */
+#menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+#menu h2 {
+    width: 100%; /* 見出しを上部に全幅で配置 */
+}
+
+#menu div {
+    background-color: #ffffff;
+    border: 1px solid #eae5df;
+    border-radius: 8px;
+    padding: 20px;
+    width: 240px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    text-align: center;
+}
+
+#menu img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+#menu p {
+    margin: 0;
+    font-size: 0.95em;
+    color: #444;
+}
+
+/* --- Contact (フォーム) --- */
+#contact form {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left; /* 入力項目は左揃えにして整える */
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #eae5df;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+#contact form div {
+    margin-bottom: 20px;
+}
+
+#contact label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 0.9em;
+    color: #38614c;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* paddingを含めた幅調整 */
+    font-size: 1em;
+}
+
+#contact textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+/* 送信ボタンのスタイル */
+#contact button[type="submit"] {
+    display: block;
+    width: 100%;
+    background-color: #38614c;
+    color: #ffffff;
+    border: none;
+    padding: 12px;
+    font-size: 1em;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+#contact button[type="submit"]:hover {
+    background-color: #2b4c3b;
+}
+
+/* =================================
+   フッター (Footer)
+================================= */
+footer {
+    background-color: #38614c; /* ヘッダーと同系色の濃い緑 */
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 50px;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 0;
+}
